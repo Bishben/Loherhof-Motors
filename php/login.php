@@ -27,19 +27,43 @@
       if (isset($_POST['user']) && isset($_POST['pass'])){
         $user = trim($_POST['user']);
         $pass = trim($_POST['pass']);
-        $file = "up.txt";
-        $f = fopen($file, 'r') or die ("405 Error");
-        $loggedin = false;
-        while (! feof($f)){
-          $line = fgets($f, 4069);
-          $line = trim($line);
-          $up = explode(";", $line);
-          if($user == trim($up[0]) && md5($pass) == trim($up[1])){
-            header("Location: admin.php" );
-            $loggedin = true;
+        $servername = "localhost";
+        $username = "root";
+        $password = "2912";
+        $dbname = "loherhofMotors";
+
+        $conn = new mysqli($servername, $username, $password, $dbname);
+
+        if ($conn->connect_error) {
+          die("Connection failed: " . $conn->connect_error);
+        }
+
+        $sql = 'select * from Users';
+        $result = $conn->query($sql);
+
+        if($result->num_rows > 0){
+          $check = false;
+          while($row = $result->fetch_assoc()){
+            if($row['name'] == $user && $row['hash'] == md5($pass)){
+               $check = true;
+               $sql = "update users set login = 'true' where name='{$user}'";
+               $conn->query($sql);
+               $sql = 'select * from Users';
+               $result = $conn->query($sql);
+               while($Row = $result->fetch_assoc()){
+                 if($user != $Row['name']){
+                   $sql = "update users set login = 'false' where name='{$Row['name']}'";
+                   $conn->query($sql);
+                 }
+               }
+               break;
+            }
           }
         }
-        if ($loggedin == false){
+
+        if($check == true){
+          #header("Location: admin.php");
+        } else{
           echo <<<_END
           <script>
             error = document.getElementById('error')
