@@ -40,26 +40,26 @@
     <td>Bisben</td>
     <td>bisben@gmail.com</td>
     <td>Bishben</td>
-    <td>Lamoney</td>
-    <td>tick</td>
+    <td>Lalmoney</td>
+    <td>&#9989;</td>
     <td>29/12/2003</td>
   </tr>
 
   <tr>
     <td>jayesh</td>
-    <td>bisben@gmail.com</td>
+    <td>jayesh@hotmail.com</td>
     <td>Jayesh</td>
     <td>Anand</td>
-    <td>tick</td>
+    <td>&#9989;</td>
     <td>17/08/2003</td>
   </tr>
 
   <tr>
     <td>bartu</td>
-    <td>bisben@gmail.com</td>
+    <td>bartu@gmail.com</td>
     <td>Bartu</td>
     <td>Tiryaki</td>
-    <td>tick</td>
+    <td>&#9989;</td>
     <td>17/08/2003</td>
   </tr>
 
@@ -67,8 +67,8 @@
     <td>tobi</td>
     <td>bisben@gmail.com</td>
     <td>Tobi</td>
-    <td>Lamoney</td>
-    <td>tick</td>
+    <td>Olualao</td>
+    <td>&#9989;</td>
     <td>17/08/2003</td>
   </tr>
 
