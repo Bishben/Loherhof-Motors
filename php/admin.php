@@ -11,7 +11,7 @@
         Loherhof Motors
       </div>
       <div class="nav">
-        <span class="yellow">Welcome.</span>&nbsp;<a href="localhost/index.html">VIEW SITE</a>&nbsp;/&nbsp;<a href="localhost/login.php">LOG OUT</a>
+        <span class="yellow">Welcome.</span>&nbsp;<a href="http://localhost/Loherhof-Motors/php/index.php">VIEW SITE</a>&nbsp;/&nbsp;<a href="http://localhost/Loherhof-Motors/php/login.php">LOG OUT</a>
       </div>
     </div>
     <div class="siteText">Site administration</div>
@@ -23,10 +23,10 @@
           </div>
           <div class="containerTwo">
             <div class="subHead">
-              <a href="#">Users</a>
+              <a href="http://localhost/Loherhof-Motors/php/user.php">Users</a>
             </div>
             <div class="func view">
-              <a href="#"><span class="green">&#128065;</span>&nbsp;View<a>
+              <a href="http://localhost/Loherhof-Motors/php/user.php"><span class="green">&#128065;</span>&nbsp;View</a>
             </div>
           </div>
         </div>
@@ -39,7 +39,7 @@
               <a href="#">Cars</a>
             </div>
             <div class="func">
-              <a href="#"><span class="green">&#10010;</span>&nbsp;Add<a>&nbsp;&nbsp;&nbsp;<a href="#"><span class="size-down">&#10060;</span>&nbsp;Remove</a>
+              <a href="http://localhost/Loherhof-Motors/php/carsection.php"><span class="green">&#10010;</span>&nbsp;Add<a>&nbsp;&nbsp;&nbsp;<a href="#"><span class="size-down">&#10060;</span>&nbsp;Remove</a>
             </div>
           </div>
         </div>
