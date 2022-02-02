@@ -1,0 +1,128 @@
+*{
+  margin: 0;
+  font-family: roboto, sans-serif;
+}
+
+/* COLORS */
+
+.yellow{
+  color: #ffc;
+}
+
+.green{
+  color: green;
+}
+
+.size-down{
+  font-size: 10px;
+}
+/* HEADER TOP */
+
+.headerContainer{
+  padding: 40px 10px;
+  text-align: center;
+  background-color: #417690;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.compName{
+  color: #f5dd5d;
+  font-size: 20px;
+  letter-spacing: 1.5px;
+  margin-left: 20px;
+}
+
+.nav{
+  font-size: 15px;
+  color: white;
+}
+
+.nav a{
+  text-decoration: none;
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+.nav a:hover{
+  color: #79aec8;
+  border-bottom: 1px solid #79aec8;
+}
+
+/* Site Administration */
+
+.siteText{
+  font-family: Georgia;
+  letter-spacing: .5px;
+  font-size: 20px;
+  margin: 30px 0px 0px 30px;
+}
+
+/* AUTHENTICATION & AUTHORIZATION CONTAINER */
+
+.mainContainerOne{
+  margin: 30px 0px 0px 30px;
+  width: 400px;
+}
+.containerOne{
+  background-color: #79aec8;
+  color: white;
+  padding: 10px;
+  letter-spacing: .2px;
+}
+
+.containerTwo{
+  background-color: rgba(227, 227, 227, 0.3);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(227, 227, 227, 1);
+}
+
+.containerTwo a{
+  color: #417690;
+  text-decoration: none;
+}
+
+.containerTwo a:hover{
+  color:black;
+}
+
+.subHead{
+  font-weight: bold;
+}
+
+.cars{
+  margin-right: 199px;
+}
+
+.view{
+  margin-left: 260px;
+}
+
+/* RECENT ACTIONS COTAINER */
+
+.mainContainerTwo{
+  width: 300px;
+  margin: 30px 0px 0px 30px;
+}
+
+.subHeadTwo{
+  background-color: rgba(227, 227, 227, 0.5);
+  border-bottom: 1px solid rgba(227, 227, 227, 1);
+  padding: 10px;
+  font-weight: bold;
+}
+
+.actions{
+  background-color: rgba(227, 227, 227, 0.5);
+  padding: 10px;
+}
+
+/* LAYOUT */
+
+.flexContainer{
+  display: flex;
+}

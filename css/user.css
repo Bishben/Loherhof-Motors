@@ -1,0 +1,113 @@
+*{
+  margin: 0;
+  font-family: roboto, sans-serif;
+}
+
+/* COLORS */
+
+.yellow{
+  color: #ffc;
+}
+
+/* HEADER TOP */
+
+.headerContainer{
+  padding: 20px 10px;
+  text-align: center;
+  background-color: #417690;
+  display: flex;
+  justify-content: space-between;
+}
+
+.compName{
+  color: #f5dd5d;
+  font-size: 20px;
+  letter-spacing: 1.5px;
+}
+
+.nav{
+  font-size: 15px;
+  color: white;
+}
+
+.nav a{
+  text-decoration: none;
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+.nav a:hover{
+  color: #79aec8;
+  border-bottom: 1px solid #79aec8;
+}
+
+.breadcrumb{
+  padding: 10px 5px;
+  text-align: center;
+  background-color: #79aec8;
+  display: flex;
+  color:#C3CCCC;
+
+
+}
+.breadcrumb-item{
+  padding: 5px 4px;
+  text-align: center;
+  background-color: #79aec8;
+  display: flex;
+}
+
+.breadcrumb-item a{
+  color:white;
+  text-decoration: none;
+}
+
+/*Table*/
+
+.tables {
+    width: 92%;
+    background: white;
+    color: black;
+    margin-top: 50px;
+
+    margin-left: 50px;
+  }
+
+  .tables tr{
+      border:1px solid black;
+      height:40px;
+      width:100px;
+      }
+
+    .tables th {
+
+      height:40px;
+      width:150px;
+      color:black;
+      }
+
+    .tables td {
+      height:40px;
+      width:150px;
+      max-width: 7em;
+      }
+
+    th, td {
+      text-align: center;
+      margin-top: 10px;
+    }
+    tr:hover{
+      color:#3998FD;
+      background: #C9CCCC;
+      transition-duration: 1.2s;
+      cursor:pointer;
+    }
+
+/* Site Administration */
+
+.siteText{
+  font-family: Georgia;
+  letter-spacing: .5px;
+  font-size: 20px;
+  margin: 30px 0px 0px 30px;
+}
