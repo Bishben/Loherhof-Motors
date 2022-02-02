@@ -11,13 +11,13 @@
         Loherhof Motors
       </div>
       <div class="nav">
-        <span class="yellow">Welcome.</span>&nbsp;<a href="localhost/index.html">VIEW SITE</a>&nbsp;/&nbsp;<a href="localhost/login.php">LOG OUT</a>
+        <span class="yellow">Welcome.</span>&nbsp;<a href="http://localhost/Loherhof-Motors/php/index.php">VIEW SITE</a>&nbsp;/&nbsp;<a href="http://localhost/Loherhof-Motors/php/login.php">LOG OUT</a>
       </div>
     </div>
 
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="localhost/admin.php">Home</a></li>
+    <li class="breadcrumb-item"><a href="http://localhost/Loherhof-Motors/php/admin.php">Home</a></li>
     <li class="breadcrumb-item"><a href="#">>&nbsp;AUTHENTICATION AND AUTHORIZATION</a></li>
     <li class="breadcrumb-item" aria-current="page">>&nbsp;Users</li>
   </ol>

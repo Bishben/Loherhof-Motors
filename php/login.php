@@ -62,7 +62,7 @@
         }
 
         if($check == true){
-          #header("Location: admin.php");
+          #header("Location: http://localhost/Loherhof-Motors/php/admin.php");
         } else{
           echo <<<_END
           <script>
