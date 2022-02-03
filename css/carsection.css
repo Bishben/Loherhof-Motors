@@ -159,7 +159,7 @@
 
 .name:hover{
   box-shadow: 5px 5px 5px #417690;
-  transition-duration: 1s;
+  transition-duration: 0.3s;
 }
 
 .img1{
@@ -173,7 +173,7 @@
 
 .img1:hover{
   box-shadow: 5px 5px 5px #417690;
-  transition-duration: 1s;
+  transition-duration: 0.3s;
 }
 
 .img2{
@@ -187,7 +187,7 @@
 
 .img2:hover{
   box-shadow: 5px 5px 5px #417690;
-  transition-duration: 1s;
+  transition-duration: 0.3s;
 }
 
 .make{
@@ -201,7 +201,7 @@
 
 .make:hover{
   box-shadow: 5px 5px 5px #417690;
-  transition-duration: 1s;
+  transition-duration: 0.3s;
 }
 
 .model{
@@ -215,7 +215,7 @@
 
 .model:hover{
     box-shadow: 5px 5px 5px #417690;
-    transition-duration: 1s;
+    transition-duration: 0.3s;
 }
 
 .condition{
@@ -229,7 +229,7 @@
 
 .condition:hover{
   box-shadow: 5px 5px 5px #417690;
-  transition-duration: 1s;
+  transition-duration: 0.3s;
 }
 .price{
   width: 80%;
@@ -242,7 +242,7 @@
 
 .price:hover{
   box-shadow: 5px 5px 5px #417690;
-  transition-duration: 1s;
+  transition-duration: 0.3s;
 }
 
 .kilo{
@@ -256,7 +256,7 @@
 
 .kilo:hover{
   box-shadow: 5px 5px 5px #417690;
-  transition-duration: 1s;
+  transition-duration: 0.3s;
 }
 
 .color{
@@ -270,7 +270,7 @@
 
 .color:hover{
   box-shadow: 5px 5px 5px #417690;
-  transition-duration: 1s;
+  transition-duration: 0.3s;
 }
 
 .feature{
@@ -284,16 +284,17 @@
 
 .feature:hover{
   box-shadow: 5px 5px 5px #417690;
+  transition-duration: 0.3s;
 }
 /*Save button*/
 
 .btn {
-  border: 1px solid black;
-  COLOR: white;
+  border: 1px solid #79aec8;
+  color: white;
   height: 30px;
   width: 100px;
   background:#79aec8;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor:pointer;
 }
 
@@ -304,10 +305,9 @@
   height: 30px;
   width: 100px;
   background: #417690;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor:pointer;
-  box-shadow: 3px 3px 5px #417690;
-  transition-duration: 1s;
+  transition-duration: 0.1s;
 
 }
 

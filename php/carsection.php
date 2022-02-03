@@ -18,45 +18,44 @@
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="http://localhost/Loherhof-Motors/php/admin.php">Home</a></li>
-    <li class="breadcrumb-item"><a href="http://localhost/Loherhof-Motors/php/admin.php">>&nbsp;AUTHENTICATION AND AUTHORIZATION</a></li>
+    <li class="breadcrumb-item"><a href="http://localhost/Loherhof-Motors/php/admin.php">>&nbsp;Home Objects</a></li>
     <li class="breadcrumb-item"><a href="#">>&nbsp;Cars</a></li>
     <li class="breadcrumb-item" aria-current="page">>&nbsp;Add Car</li>
   </ol>
 </nav>
 <div class="whole_container">
 <div class="cont">Add Car</div>
-<hr>
   <div class="name">Name: <input type="text"></div>
-  <div class="img1">Image One:<input type="file"></div>
-  <div class="img2">Image Two:<input type="file"></div>
+  <div class="img1">Image One: <input type="text"></div>
+  <div class="img2">Image Two: <input type="text"></div>
 
   <div class="make">Make:
 
   <select>
-    <option>-----</option>
+    <option selected="true" disabled="disabled">Select Make</option>
     <option>Audi</option>
     <option>Aston Martin</option>
     <option>BMW</option>
     <option>Mercedes</option>
     <option>Nissan</option>
-    <option>Opel</option>
-    <option>Peugot</option>
+    <option>Jeep</option>
+    <option>Honda</option>
     <option>Renault</option>
     <option>Toyota</option>
     <option>Hyundai</option>
-    <option>Skoda</option>
+    <option>Ford</option>
 
   </select>
 
 
-  <input type="submit" value="OK"></div>
+  </div>
   <div class="model">Model: <input type="text"></div>
 
 
   <div class="condition">Condition:
 
   <select>
-    <option>---</option>
+    <option selected="true" disabled="disabled">Select Condition</option>
     <option>New</option>
     <option>Old</option>
   </select>
@@ -69,7 +68,7 @@
   <div class="color">Color:
 
     <select>
-      <option>-------</option>
+      <option selected="true" disabled="disabled">Select Color</option>
       <option>Black</option>
       <option>White</option>
       <option>Red</option>
@@ -84,7 +83,7 @@
   <div class="feature">Featured:
 
     <select>
-      <option>---</option>
+      <option selected="true" disabled="disabled">Select</option>
       <option>Yes</option>
       <option>No</option>
     </select>
