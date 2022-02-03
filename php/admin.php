@@ -82,7 +82,7 @@
           </div>
           <div class="containerTwo">
             <div class="subHead cars">
-              <a href="#">Cars</a>
+              <a href="http://localhost/loherhof-Motors/php/cars(admin).php">Cars</a>
             </div>
             <div class="func">
               <a href="http://localhost/Loherhof-Motors/php/carsection.php"><span class="green">&#10010;</span>&nbsp;Add<a>&nbsp;&nbsp;&nbsp;<a href="#"><span class="size-down">&#10060;</span>&nbsp;Remove</a>

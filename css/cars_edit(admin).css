@@ -1,0 +1,288 @@
+*{
+  margin: 0;
+  font-family: roboto, sans-serif;
+}
+
+/* COLORS */
+
+.yellow{
+  color: #ffc;
+}
+
+/* HEADER TOP */
+
+.headerContainer{
+  padding: 20px 10px;
+  text-align: center;
+  background-color: #417690;
+  display: flex;
+  justify-content: space-between;
+}
+
+.compName{
+  color: #f5dd5d;
+  font-size: 20px;
+  letter-spacing: 1.5px;
+}
+
+.nav{
+  font-size: 15px;
+  color: white;
+}
+
+.nav a{
+  text-decoration: none;
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+.nav a:hover{
+  color: #79aec8;
+  border-bottom: 1px solid #79aec8;
+}
+
+.breadcrumb{
+  padding: 10px 5px;
+  text-align: center;
+  background-color: #79aec8;
+  display: flex;
+  color:#C3CCCC;
+
+
+}
+.breadcrumb-item{
+  padding: 5px 4px;
+  text-align: center;
+  background-color: #79aec8;
+  display: flex;
+}
+
+.breadcrumb-item a{
+  color:white;
+  text-decoration: none;
+}
+
+
+
+
+/* COLORS */
+
+.yellow{
+  color: #ffc;
+}
+
+/* HEADER TOP */
+
+.headerContainer{
+  padding: 20px 10px;
+  text-align: center;
+  background-color: #417690;
+  display: flex;
+  justify-content: space-between;
+}
+
+.compName{
+  color: #f5dd5d;
+  font-size: 20px;
+  letter-spacing: 1.5px;
+}
+
+.nav{
+  font-size: 15px;
+  color: white;
+}
+
+.nav a{
+  text-decoration: none;
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+.nav a:hover{
+  color: #79aec8;
+  border-bottom: 1px solid #79aec8;
+}
+
+.breadcrumb{
+  padding: 10px 5px;
+  text-align: center;
+  background-color: #79aec8;
+  display: flex;
+  color:#C3CCCC;
+
+
+}
+.breadcrumb-item{
+  padding: 5px 4px;
+  text-align: center;
+  background-color: #79aec8;
+  display: flex;
+}
+
+.breadcrumb-item a{
+  color:white;
+  text-decoration: none;
+}
+
+
+/* Site Administration */
+
+.siteText{
+  font-family: Georgia;
+  letter-spacing: .5px;
+  font-size: 20px;
+  margin: 30px 0px 0px 30px;
+}
+
+.whole_container{
+  margin-left: 100px;
+  margin-bottom: 50px;
+}
+
+.cont{
+  width: 80%;
+  color:black;
+  font-size: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid gray;
+}
+
+.name{
+  width: 80%;
+  color:black;
+  font-size: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid gray;
+}
+
+.name:hover{
+  box-shadow: 5px 5px 5px #417690;
+  transition-duration: 0.3s;
+}
+
+.img1{
+  width: 80%;
+  color:black;
+  font-size: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid gray;
+}
+
+.img1:hover{
+  box-shadow: 5px 5px 5px #417690;
+  transition-duration: 0.3s;
+}
+
+.img2{
+  width: 80%;
+  color:black;
+  font-size: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid gray;
+}
+
+.img2:hover{
+  box-shadow: 5px 5px 5px #417690;
+  transition-duration: 0.3s;
+}
+
+.make{
+  width: 80%;
+  color:black;
+  font-size: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid gray;
+}
+
+.make:hover{
+  box-shadow: 5px 5px 5px #417690;
+  transition-duration: 0.3s;
+}
+
+.model{
+  width: 80%;
+  color:black;
+  font-size: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid gray;
+}
+
+.model:hover{
+    box-shadow: 5px 5px 5px #417690;
+    transition-duration: 0.3s;
+}
+
+.condition{
+  width: 80%;
+  color:black;
+  font-size: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid gray;
+}
+
+.condition:hover{
+  box-shadow: 5px 5px 5px #417690;
+  transition-duration: 0.3s;
+}
+.price{
+  width: 80%;
+  color:black;
+  font-size: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid gray;
+}
+
+.price:hover{
+  box-shadow: 5px 5px 5px #417690;
+  transition-duration: 0.3s;
+}
+
+.kilo{
+  width: 80%;
+  color:black;
+  font-size: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid gray;
+}
+
+.kilo:hover{
+  box-shadow: 5px 5px 5px #417690;
+  transition-duration: 0.3s;
+}
+
+.color{
+  width: 80%;
+  color:black;
+  font-size: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid gray;
+}
+
+.color:hover{
+  box-shadow: 5px 5px 5px #417690;
+  transition-duration: 0.3s;
+}
+
+.feature{
+  width: 80%;
+  color:black;
+  font-size: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid gray;
+}
+
+.feature:hover{
+  box-shadow: 5px 5px 5px #417690;
+  transition-duration: 0.3s;
+}

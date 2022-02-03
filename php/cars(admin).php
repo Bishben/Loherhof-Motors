@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>User Page</title>
-    <link rel="stylesheet" type="text/css" href="../css/us.css">
+    <link rel="stylesheet" type="text/css" href="../css/cars(admin).css">
   </head>
   <body>
     <div class="headerContainer">
@@ -19,16 +19,15 @@
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="http://localhost/Loherhof-Motors/php/admin.php">Home</a></li>
     <li class="breadcrumb-item"><a href="http://localhost/Loherhof-Motors/php/admin.php">>&nbsp;AUTHENTICATION AND AUTHORIZATION</a></li>
-    <li class="breadcrumb-item" aria-current="page">>&nbsp;Users</li>
+    <li class="breadcrumb-item" aria-current="page">>&nbsp;Cars</li>
   </ol>
 </nav>
-<div class="tables">
-  <div class="e1"></div>
-  <table class="responstable">
-  <tr>
-    <th>USERNAME</th>
-    <th>STAFF STATUS</th>
-  </tr>
+  <div class=whole_contain>
+  <div class="container1"></div>
+  <div class="container2">
+  <div class="box1">
+    CARS
+  </div>
 
   <?php
 
@@ -44,30 +43,25 @@
     die("Connection failed: " . $conn->connect_error);
     }
 
-    $sql = 'select * from users';
+    $sql = 'select * from cars';
     $result = $conn->query($sql);
 
     if($result->num_rows > 0){
        while($row = $result->fetch_assoc()){
-         if($row['login'] == 'true'){
+
            echo <<<_END
-                 <tr>
-                   <td>{$row['name']}</td>
-                   <td>&#9989;</td>
-                 </tr>
+                 <div class="box2">
+                   <a href="cars_edit(admin).php?name={$row['url']}">{$row['Name']}</a>
+                 </div>
             _END;
-          } else{
-            echo <<<_END
-                  <tr>
-                    <td>{$row['name']}</td>
-                    <td>&#10060;</td>
-                  </tr>
-             _END;
-          }
-         }
-       }
+        }
+    }
+
+
 
    ?>
- </table>
-   <div class="e1"></div></div></body>
+   </div>
+   <div class="container1"></div>
+ </div>
+  </body>
 </html>
