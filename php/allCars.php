@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Loherhof Motors | Home</title>
+    <title>Loherhof Motors | All Cars</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="../css/index.css">
   </head>
@@ -26,9 +26,9 @@
     </div>
     <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
       <button onclick="w3_close()" class="w3-bar-item w3-large">Loherhof Motors &nbsp; &times;</button>
-      <form action="{% url 'web:search' %}" method="post" name="">
-        <select class="form-select" aria-label="Default select example" name="car_make">
-          <option selected>Car Make</option>
+      <form method="post" name="filter">
+        <select class="form-select" aria-label="Default select example" name="make" required>
+          <option selected disabled>Car Make</option>
           <option>Toyota</option>
           <option>Nissan</option>
           <option>Mitsubishi</option>
@@ -38,21 +38,21 @@
           <option>BMW</option>
         </select>
         <br>
-        <select class="form-select" aria-label="Default select example" name="car_condition">
-          <option selected>Condition</option>
+        <select class="form-select" aria-label="Default select example" name="cond" required>
+          <option selected disabled>Condition</option>
           <option>New</option>
-          <option>Old</option>
+          <option>Used</option>
         </select>
         <br>
-        <select class="form-select" aria-label="Default select example" name="car_price">
-          <option selected>Price</option>
-          <option>Low to High</option>
-          <option>High to Low</option>
+        <select class="form-select" aria-label="Default select example" name="price" required>
+          <option selected disabled>Price</option>
+          <option value='1'>Low to High</option>
+          <option value='2'>High to Low</option>
         </select>
         <br>
-        <select class="form-select" aria-label="Default select example" name = "car_color">
-          <option selected>Color</option>
-          <option>Any</option>
+        <select class="form-select" aria-label="Default select example" name = "color" required>
+          <option selected disabled>Color</option>
+          <option value='0'>Any</option>
           <option>White</option>
           <option>Black</option>
           <option>Gray</option>
@@ -109,8 +109,14 @@
 
            }
         }
+        $conn->close();
        ?>
     </div>
+    <?php
+    if(isset($_POST['make']) && isset($_POST['cond']) && isset($_POST['price']) && isset($_POST['color'])){
+      header("Location: filter.php?make={$_POST['make']}&cond={$_POST['cond']}&price={$_POST['price']}&color={$_POST['color']}");
+    }
+     ?>
   </body>
   <script type="text/javascript" src="../js/index.js"></script>
 </html>
