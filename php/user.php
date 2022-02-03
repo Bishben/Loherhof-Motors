@@ -18,7 +18,7 @@
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="http://localhost/Loherhof-Motors/php/admin.php">Home</a></li>
-    <li class="breadcrumb-item"><a href="#">>&nbsp;AUTHENTICATION AND AUTHORIZATION</a></li>
+    <li class="breadcrumb-item"><a href="http://localhost/Loherhof-Motors/php/admin.php">>&nbsp;AUTHENTICATION AND AUTHORIZATION</a></li>
     <li class="breadcrumb-item" aria-current="page">>&nbsp;Users</li>
   </ol>
 </nav>
@@ -51,29 +51,17 @@
        while($row = $result->fetch_assoc()){
          if($row['login'] == 'true'){
            echo <<<_END
-
-
-
-
                  <tr>
                    <td>{$row['name']}</td>
                    <td>&#9989;</td>
                  </tr>
-
-
             _END;
           } else{
             echo <<<_END
-
-
-
-
                   <tr>
                     <td>{$row['name']}</td>
                     <td>&#10060;</td>
                   </tr>
-
-
              _END;
           }
          }
