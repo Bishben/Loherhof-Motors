@@ -62,7 +62,7 @@
         }
 
         if($check == true){
-          #header("Location: admin.php");
+          header("Location: admin.php");
         } else{
           echo <<<_END
           <script>
