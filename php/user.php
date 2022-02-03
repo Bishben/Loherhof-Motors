@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>User Page</title>
-    <link rel="stylesheet" type="text/css" href="../css/user.css">
+    <link rel="stylesheet" type="text/css" href="../css/us.css">
   </head>
   <body>
     <div class="headerContainer">
@@ -11,68 +11,94 @@
         Loherhof Motors
       </div>
       <div class="nav">
-        <span class="yellow">Welcome.</span>&nbsp;<a href="localhost/index.html">VIEW SITE</a>&nbsp;/&nbsp;<a href="localhost/login.php">LOG OUT</a>
+        <span class="yellow">Welcome.</span>&nbsp;<a href="http://localhost/Loherhof-Motors/php/index.php">VIEW SITE</a>&nbsp;/&nbsp;<a href="http://localhost/Loherhof-Motors/php/login.php">LOG OUT</a>
       </div>
     </div>
 
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="localhost/admin.php">Home</a></li>
+    <li class="breadcrumb-item"><a href="http://localhost/Loherhof-Motors/php/admin.php">Home</a></li>
     <li class="breadcrumb-item"><a href="#">>&nbsp;AUTHENTICATION AND AUTHORIZATION</a></li>
     <li class="breadcrumb-item" aria-current="page">>&nbsp;Users</li>
   </ol>
 </nav>
-
 <div class="tables">
+  <div class="e1"></div>
   <table class="responstable">
-
   <tr>
     <th>USERNAME</th>
-    <th>EMAIL ADRESS</th>
-
-    <th><span>FIRST NAME</span></th>
-    <th>LAST NAME</th>
     <th>STAFF STATUS</th>
-    <th>DATE OF BIRTH</th>
   </tr>
 
-  <tr>
-    <td>Bisben</td>
-    <td>bisben@gmail.com</td>
-    <td>Bishben</td>
-    <td>Lalmoney</td>
-    <td>&#9989;</td>
-    <td>29/12/2003</td>
-  </tr>
+  <?php
 
-  <tr>
-    <td>jayesh</td>
-    <td>jayesh@hotmail.com</td>
-    <td>Jayesh</td>
-    <td>Anand</td>
-    <td>&#9989;</td>
-    <td>17/08/2003</td>
-  </tr>
 
-  <tr>
-    <td>bartu</td>
-    <td>bartu@gmail.com</td>
-    <td>Bartu</td>
-    <td>Tiryaki</td>
-    <td>&#9989;</td>
-    <td>17/08/2003</td>
-  </tr>
+    $servername = "localhost";
+    $username = "root";
+    $password = "2912";
+    $dbname = "loherhofMotors";
 
-  <tr>
-    <td>tobi</td>
-    <td>bisben@gmail.com</td>
-    <td>Tobi</td>
-    <td>Olualao</td>
-    <td>&#9989;</td>
-    <td>17/08/2003</td>
-  </tr>
+    $conn = new mysqli($servername, $username, $password, $dbname);
 
-</table>
-  </div>
-  </body>
+    if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+    }
+
+    $sql = 'select * from users';
+    $result = $conn->query($sql);
+
+    if($result->num_rows > 0){
+       while($row = $result->fetch_assoc()){
+         if($row['login'] == 'true'){
+           echo <<<_END
+
+
+
+
+                 <tr>
+                   <td>{$row['name']}</td>
+                   <td>&#9989;</td>
+                 </tr>
+
+
+            _END;
+          } else{
+            echo <<<_END
+
+
+
+
+                  <tr>
+                    <td>{$row['name']}</td>
+                    <td>&#10060;</td>
+                  </tr>
+
+
+             _END;
+          }
+         }
+       }
+
+   ?>
+ </table>
+   <div class="e1"></div></div></body>
 </html>
+
+
+<!--<td>{if($row['login']=='true') &#9989; else &#10060; }</td>
+</tr>
+
+<tr>
+<td>jayesh</td>
+<td>&#9989;</td>
+</tr>
+
+<tr>
+<td>bartu</td>
+<td>&#9989;</td>
+</tr>
+
+<tr>
+<td>tobi</td>
+<td>&#9989;</td>
+</tr>-->
