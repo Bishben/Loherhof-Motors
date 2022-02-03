@@ -25,6 +25,53 @@
         </div>
       </div>
     </div>
+    <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+      <button onclick="w3_close()" class="w3-bar-item w3-large">Loherhof Motors &nbsp; &times;</button>
+      <form method="post" name="filter">
+        <select class="form-select" aria-label="Default select example" name="make" required>
+          <option selected disabled>Car Make</option>
+          <option>Toyota</option>
+          <option>Nissan</option>
+          <option>Mitsubishi</option>
+          <option>Lexus</option>
+          <option>Hyundai</option>
+          <option>Renault</option>
+          <option>BMW</option>
+        </select>
+        <br>
+        <select class="form-select" aria-label="Default select example" name="cond" required>
+          <option selected disabled>Condition</option>
+          <option>New</option>
+          <option>Used</option>
+        </select>
+        <br>
+        <select class="form-select" aria-label="Default select example" name="price" required>
+          <option selected disabled>Price</option>
+          <option value='1'>Low to High</option>
+          <option value='2'>High to Low</option>
+        </select>
+        <br>
+        <select class="form-select" aria-label="Default select example" name = "color" required>
+          <option selected disabled>Color</option>
+          <option value='0'>Any</option>
+          <option>White</option>
+          <option>Black</option>
+          <option>Gray</option>
+          <option>Silver</option>
+          <option>Red</option>
+          <option>Blue</option>
+          <option>Brown</option>
+          <option>Green</option>
+          <option>Beige</option>
+          <option>Orange</option>
+          <option>Gold</option>
+          <option>Yellow</option>
+          <option>Purple</option>
+        </select>
+        <br>
+        <button type="submit" class="btn-primary" name="button">Apply Filter</button>
+      </form>
+    </div>
     <div class="pad">
       <div class="w3-panel w3-leftbar w3-rightbar w3-border-purple">
         <h2 class = "w3-center">Contact Us</h2>
@@ -57,6 +104,11 @@
         <br>
       </div>
     </div>
+    <?php
+    if(isset($_POST['make']) && isset($_POST['cond']) && isset($_POST['price']) && isset($_POST['color'])){
+      header("Location: filter.php?make={$_POST['make']}&cond={$_POST['cond']}&price={$_POST['price']}&color={$_POST['color']}");
+    }
+     ?>
   </body>
   <script type="text/javascript" src="../js/index.js"></script>
 </html>
