@@ -24,112 +24,114 @@
   </ol>
 </nav>
 <form method="post">
-<div class="whole_container">
-<div class="cont">Add Car</div>
-  <div class="name">Name: <input type="text" name="n1"></div>
-  <div class="img1">Image One: <input type="text" name="n2"></div>
-  <div class="img2">Image Two: <input type="text" name="n3"></div>
+  <div class="whole_container">
+  <div class="cont">Add Car</div>
+    <div class="name">Name: <input type="text" name="name" reuired></div>
+    <div class="img1">Image One: <input type="text" name="imgOne" required></div>
+    <div class="img2">Image Two: <input type="text" name="imgTwo" required></div>
 
-  <div class="make">Make:
+    <div class="make">Make:
 
-  <select name="n4">
-    <option selected="true" disabled="disabled">Select Make</option>
-    <option>Audi</option>
-    <option>Aston Martin</option>
-    <option>BMW</option>
-    <option>Mercedes</option>
-    <option>Nissan</option>
-    <option>Jeep</option>
-    <option>Honda</option>
-    <option>Renault</option>
-    <option>Toyota</option>
-    <option>Hyundai</option>
-    <option>Ford</option>
+    <select name="make" required>
+      <option selected disabled>Select Make</option>
+      <option>Audi</option>
+      <option>Aston Martin</option>
+      <option>BMW</option>
+      <option>Mercedes</option>
+      <option>Nissan</option>
+      <option>Jeep</option>
+      <option>Honda</option>
+      <option>Renault</option>
+      <option>Toyota</option>
+      <option>Hyundai</option>
+      <option>Ford</option>
 
-  </select>
-
-
-  </div>
-  <div class="model">Model: <input type="text" name="n5"></div>
-
-
-  <div class="condition">Condition:
-
-  <select name="n6">
-    <option selected="true" disabled="disabled">Select Condition</option>
-    <option>New</option>
-    <option>Old</option>
-  </select>
-  </div>
-
-  <div class="price">Price: <input type="text" name="n7"></div>
-  <div class="kilo">Kilometers: <input type="text" name="n8"></div>
-
-
-  <div class="color">Color:
-
-    <select name="n9">
-      <option selected="true" disabled="disabled">Select Color</option>
-      <option>Black</option>
-      <option>White</option>
-      <option>Red</option>
-      <option>Yellow</option>
-      <option>Blue</option>
-      <option>Green</option>
-      <option>Brown</option>
-      <option>Silver</option>
     </select>
-  </div>
 
-  <div class="feature">Featured:
 
-    <select name="n10">
-      <option selected="true" disabled="disabled">Select</option>
-      <option>Yes</option>
-      <option>No</option>
+    </div>
+    <div class="model">Model: <input type="text" name="model" required></div>
+
+
+    <div class="condition">Condition:
+
+    <select name="cond" required>
+      <option selected="true" disabled="disabled">Select Condition</option>
+      <option>New</option>
+      <option>Old</option>
     </select>
+    </div>
+
+    <div class="price">Price: <input type="text" name="price" required></div>
+    <div class="kilo">Kilometers: <input type="text" name="km" required></div>
+
+
+    <div class="color">Color:
+
+      <select name="color" required>
+        <option selected="true" disabled="disabled">Select Color</option>
+        <option>Black</option>
+        <option>White</option>
+        <option>Red</option>
+        <option>Yellow</option>
+        <option>Blue</option>
+        <option>Green</option>
+        <option>Brown</option>
+        <option>Silver</option>
+      </select>
+    </div>
+
+    <div class="feature">Featured:
+
+      <select name="featured" required>
+        <option selected="true" disabled="disabled">Select</option>
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+    </div>
+
+
+  <div class="saving_button">
+  <button type="submit" class="btn">SAVE</button>
   </div>
 
 
-<div class="saving_button">
-<button type="button" class="btn">SAVE</button>
-</div>
-
-
-</div>
+  </div>
 </form>
 <?php
+  if (isset($_POST['name'], $_POST['imgOne'], $_POST['imgTwo'], $_POST['make'], $_POST['model'], $_POST['cond'], $_POST['price'], $_POST['km'], $_POST['color'], $_POST['featured'])){
+    $name = ucfirst($_POST['name']);
+    $model = ucfirst($_POST['model']);
+    $url = strtolower(str_replace(' ', '',  $name));
 
-  $servername = "localhost";
-  $username = "root";
-  $password = "2912";
-  $dbname = "loherhofmotors";
 
-  $conn = new mysqli($servername, $username, $password, $dbname);
+    $servername = "localhost";
+    $username = "root";
+    $password = "2912";
+    $dbname = "loherhofmotors";
 
-  if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    if ($conn->connect_error) {
+      die("Connection failed: " . $conn->connect_error);
+    }
+
+    $sql = "insert into cars (Name, ImgOne, ImgTwo, Make, Model, Cond, Color, Price, Kilometers, Featured, url, time_stamp) values ('{$name}', '{$_POST['imgOne']}', '{$_POST['imgTwo']}', '{$_POST['make']}', '{$model}', '{$_POST['cond']}', '{$_POST['color']}', '{$_POST['price']}', '{$_POST['km']}', '{$_POST['featured']}','$url',CURRENT_TIMESTAMP)";
+    if($conn->query($sql) === TRUE){
+      $sql = "insert into recent(name, action) values('{$name}', 'Add')";
+      $conn->query($sql);
+      echo "<script>alert('Car Added Successfully')</script>";
+    } else{
+      echo "<script>alert('An Unknown Error Occured')</script>";
+    }
+
+
+
+  } else{
+    echo "<script>alert('Please Enter In All Input Details";
   }
-      if ($_SERVER["REQUEST_METHOD"] == "POST") {
-      $nm =  $_REQUEST['n1'];
-      $im1 = $_REQUEST['n2'];
-      $im2 =  $_REQUEST['n3'];
-      $mk =  $_REQUEST['n4'];
-      $md = $_REQUEST['n5'];
-      $con =  $_REQUEST['n6'];
-      $pr =  $_REQUEST['n7'];
-      $km = $_REQUEST['n8'];
-      $cl =  $_REQUEST['n9'];
-      $ft =  $_REQUEST['n10'];
 
 
-      $sql = "insert into cars(Name, ImgOne, ImgTwo, Make, Model, Cond, Color, Price, Kilometers, Featured) values ('$nm', '$im1', '$im2', '$mk','$md','$con','$pr','$km','$cl','$ft',)";
-      if($conn->query($sql)==TRUE){
-        echo "New records created successfully";
-      }else {
-        echo "Error:".$sql."<br>".$conn->error;
-      }
-      }
 
 
  ?>

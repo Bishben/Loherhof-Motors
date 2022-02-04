@@ -94,21 +94,45 @@
         <div class="subHeadTwo">
           Recent Actions
         </div>
-        <div class="actions">
-          <span class="green">&#10010;</span>&nbsp;Nissan Patrol Platinum
-        </div>
-        <div class="actions">
-          <span class="green">&#10010;</span>&nbsp;Toyota Landcruiser
-        </div>
-        <div class="actions">
-          <span class="size-down">&#10060;</span>&nbsp;Nissan Patrol Platinum
-        </div>
-        <div class="actions">
-          <span class="size-down">&#10060;</span>&nbsp;Nissan Xtrail
-        </div>
-        <div class="actions">
-          <span class="green">&#10010;</span>&nbsp;Nissan Xtrail
-        </div>
+        <?php
+          $servername = "localhost";
+          $username = "root";
+          $password = "2912";
+          $dbname = "loherhofMotors";
+
+          $conn = new mysqli($servername, $username, $password, $dbname);
+
+          if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+          }
+
+          $sql = 'select * from recent';
+          $result = $conn->query($sql);
+
+          if($result->num_rows > 0){
+             $times = 0;
+             while($row = $result->fetch_assoc()){
+               $times++;
+               if($times>5){
+                 break;
+                } else{
+                  if($row['action'] == 'Add'){
+                    echo <<<_END
+                      <div class="actions">
+                        <span class="green">&#10010;</span>&nbsp;{$row['name']}
+                      </div>
+                     _END;
+                  } else{
+                      echo <<<_END
+                        <div class="actions">
+                          <span class="size-down">&#10060;</span>&nbsp;{$row['name']}
+                        </div>
+                       _END;
+                   }
+                }
+             }
+          }
+         ?>
       </div>
     </div>
   </body>
