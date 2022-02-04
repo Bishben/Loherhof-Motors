@@ -55,11 +55,32 @@
                  <div class="box2">
                    {$row['Name']}
                  </div>
-                 <div class="box3"><button type="submit" class="btn" >&#10060; DELETE</button></div>
+                 <a href="?url={$row['url']}&name={$row['Name']}"><div class="box3"><button type="button" class="btn" >&#10060; DELETE</button></div></a>
                  </div>
                  </p>
             _END;
         }
+    }
+
+    if(isset($_GET['url'], $_GET['name'])){
+      $sql = "delete from cars where url='{$_GET['url']}'";
+      if($conn->query($sql) === TRUE){
+        $sql = "insert into recent(name, action) values('{$_GET['name']}', 'Delete')";
+        $conn->query($sql);
+        echo <<<_END
+          <script>
+            alert("Car Deleted Successfully");
+            document.location.href="http://localhost/Loherhof-Motors/php/delete_cars.php";
+          </script>
+        _END;
+      } else{
+        echo <<<_END
+          <script>
+            alert("An Unknown Error Occured");
+            document.location.href="http://localhost/Loherhof-Motors/php/delete_cars.php";
+          </script>
+        _END;
+      }
     }
 
 
