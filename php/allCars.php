@@ -29,13 +29,17 @@
       <form method="post" name="filter">
         <select class="form-select" aria-label="Default select example" name="make" required>
           <option selected disabled>Car Make</option>
-          <option>Toyota</option>
-          <option>Nissan</option>
-          <option>Mitsubishi</option>
-          <option>Lexus</option>
-          <option>Hyundai</option>
-          <option>Renault</option>
+          <option>Audi</option>
+          <option>Aston Martin</option>
           <option>BMW</option>
+          <option>Mercedes</option>
+          <option>Nissan</option>
+          <option>Jeep</option>
+          <option>Honda</option>
+          <option>Renault</option>
+          <option>Toyota</option>
+          <option>Hyundai</option>
+          <option>Ford</option>
         </select>
         <br>
         <select class="form-select" aria-label="Default select example" name="cond" required>
@@ -53,23 +57,23 @@
         <select class="form-select" aria-label="Default select example" name = "color" required>
           <option selected disabled>Color</option>
           <option value='0'>Any</option>
-          <option>White</option>
           <option>Black</option>
-          <option>Gray</option>
-          <option>Silver</option>
+          <option>White</option>
           <option>Red</option>
-          <option>Blue</option>
-          <option>Brown</option>
-          <option>Green</option>
-          <option>Beige</option>
-          <option>Orange</option>
-          <option>Gold</option>
           <option>Yellow</option>
-          <option>Purple</option>
+          <option>Blue</option>
+          <option>Green</option>
+          <option>Brown</option>
+          <option>Silver</option>
         </select>
         <br>
         <button type="submit" class="btn-primary" name="button">Apply Filter</button>
       </form>
+      <?php
+        if(isset($_POST['make']) && isset($_POST['cond']) && isset($_POST['price']) && isset($_POST['color'])){
+          header("Location: filter.php?make={$_POST['make']}&cond={$_POST['cond']}&price={$_POST['price']}&color={$_POST['color']}");
+        }
+       ?>
     </div>
     <div class="flexbox">
       <?php
@@ -112,11 +116,6 @@
         $conn->close();
        ?>
     </div>
-    <?php
-    if(isset($_POST['make']) && isset($_POST['cond']) && isset($_POST['price']) && isset($_POST['color'])){
-      header("Location: filter.php?make={$_POST['make']}&cond={$_POST['cond']}&price={$_POST['price']}&color={$_POST['color']}");
-    }
-     ?>
   </body>
   <script type="text/javascript" src="../js/index.js"></script>
 </html>

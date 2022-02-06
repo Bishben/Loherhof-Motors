@@ -45,7 +45,6 @@
       <option>Toyota</option>
       <option>Hyundai</option>
       <option>Ford</option>
-
     </select>
 
 
@@ -58,7 +57,7 @@
     <select name="cond" required>
       <option selected="true" disabled="disabled">Select Condition</option>
       <option>New</option>
-      <option>Old</option>
+      <option>Used</option>
     </select>
     </div>
 
