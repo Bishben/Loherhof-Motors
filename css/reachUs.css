@@ -13,3 +13,7 @@ li{
 .fw-bold{
   font-weight: bolder;
 }
+
+ol{
+  margin-right: 25px;
+}
