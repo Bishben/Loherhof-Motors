@@ -106,7 +106,7 @@
             die("Connection failed: " . $conn->connect_error);
           }
 
-          $sql = 'select * from recent';
+          $sql = 'select * from recent order by time_stamp desc';
           $result = $conn->query($sql);
 
           if($result->num_rows > 0){
