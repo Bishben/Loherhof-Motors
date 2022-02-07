@@ -155,7 +155,7 @@
                   </div>
 
                   <footer class="w3-container c-grey w3-center">
-                    <h5><button class="w3-button w3-white w3-border w3-round-large">Contact Us</button></h5>
+                    <h5><a href="reachUs.php"<button class="w3-button w3-white w3-border w3-round-large">Contact Us</button></a></h5>
                   </footer>
 
                 </div>
