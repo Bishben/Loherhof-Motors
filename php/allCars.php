@@ -20,7 +20,7 @@
            while($row = $result->fetch_assoc()){
 
                echo <<<_END
-                 <div class="w3-card-4 w3-black">
+                 <div class="w3-card-4">
                    <img src="../img/{$row['ImgOne']}" alt="Alps">
                    <div class="w3-container w3-center">
                      <h3>{$row['Name']}</h3>
